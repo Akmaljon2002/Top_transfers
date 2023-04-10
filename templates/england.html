@@ -1,0 +1,22 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+      <div class="nav">
+        <h2>– {{davlat}} –</h2>
+        <table class="content-nav"></table>
+      </div>
+      <div class="content" style="margin-top: 170px ;">
+        <div class="clubs">
+            {% for club in c_clubs %}
+          <div class="club">
+            <a href="/club/{{club.id}}">
+              <img src="{{club.logo.url}}" alt="" />
+              {{club.nom}}
+            </a>
+          </div>
+            {% endfor %}
+        </div>
+      </div>
+
+{% endblock %}
